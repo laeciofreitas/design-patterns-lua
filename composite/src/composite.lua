@@ -20,9 +20,6 @@ class 'Composite' extends 'Task'
 	function this:duration()
 		local time = 0
 		for _, task in ipairs(sub_tasks) do
-			for k,v in pairs(task) do
-				print(k,v)
-			end
 			time = time + task:duration()
 		end
 		return time
